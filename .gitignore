@@ -5,7 +5,7 @@
 *.war
 *.ear
 *.git
-*.pom
+
 *.idea
 .idea
 target
