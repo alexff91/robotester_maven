@@ -33,6 +33,7 @@ public class TestRobot {
                     System.out.println(elem.toString()+ elem.getText());
                 }
             }
+            find(driver);
         } catch (Exception e) {
             System.out.print(e.getMessage());
         }
