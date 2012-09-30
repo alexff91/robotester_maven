@@ -1,12 +1,14 @@
 package tester;
 
 
+import com.thoughtworks.selenium.Selenium;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 
@@ -22,7 +24,7 @@ public class TestRobot {
             // Create a new instance of the html unit driver
             // Notice that the remainder of the code relies on the interface,
             // not the implementation.
-            WebDriver driver = new HtmlUnitDriver();
+            WebDriver driver = new FirefoxDriver();
             driver.get("http://market.yandex.ru/search?hid=7812186");
 
 
