@@ -18,40 +18,51 @@ public class Finder {
         driver.get(url);
 
     }
+
+    public Finder(WebDriver someDrive) {
+        this.driver = someDrive;
+
+    }
+
     public Finder(WebDriver someDrive, String someUrl) {
         this.driver = someDrive;
-        this.url  = someUrl;
+        this.url = someUrl;
         driver.get(url);
 
     }
 
-    public  List<WebElement> getAllLinks() {
+
+    public List<WebElement> getAllLinks() {
         List<WebElement> links = driver.findElements(By.tagName("a"));
 
         return links;
     }
 
-    public  List<String> getAttributes(List<WebElement> elements, String attrib) {
+    public List<String> getAttributes(List<WebElement> elements, String attrib) {
         List<String> result = new LinkedList<String>();
         for (WebElement w : elements) {
             result.add(w.getAttribute(attrib));
         }
         return result;
     }
-    public  List<WebElement> getAllButtons(WebDriver driver) {
-        List<WebElement> buttons = driver.findElements(By.xpath("//button"));
+
+    public List<WebElement> getAllButtons() {
+        List<WebElement> buttons = driver.findElements(By.xpath("//input[@type='button']"));
 
         return buttons;
     }
-    public  List<WebElement> getAllRadio(WebDriver driver) {
-        List<WebElement> radio = driver.findElements(By.xpath("//radio"));
+
+    public List<WebElement> getAllRadio() {
+        List<WebElement> radio = driver.findElements(By.xpath("//input[@type='radio']"));
 
         return radio;
     }
+
     public List<WebElement> getAllCheckBoxes() {
-        List<WebElement> checkBox = driver.findElements(By.xpath("input[@type='checkbox']"));
+        List<WebElement> checkBox = driver.findElements(By.xpath("//input[@type='checkbox']"));
         return checkBox;
     }
+
     public ExpectedCondition<List<WebElement>> textIsPresent() {
         return new ExpectedCondition<List<WebElement>>() {
             public List<WebElement> apply(WebDriver driver) {
@@ -61,6 +72,7 @@ public class Finder {
             }
         };
     }
+
     public List<WebElement> getAllInputs() {
         List<WebElement> inputs = driver.findElements(By.xpath("//input"));
         return inputs;
@@ -72,20 +84,27 @@ public class Finder {
     }
 
     public List<WebElement> getSelectors() {
-        List<WebElement> select = driver.findElements(By.xpath("//select"));
+        List<WebElement> select = driver.findElements(By.xpath("//input[@type='checkbox']"));
         return select;
     }
-    public void printListsOfElements(List<List<WebElement>> elements ){
+
+    public List<WebElement> getInputTexts() {
+        List<WebElement> select = driver.findElements(By.xpath("//input[@type='text' and 'search']"));
+        return select;
+    }
+
+    public void printListsOfElements(List<List<WebElement>> elements) {
         for (List<WebElement> e : elements) {
             System.out.println("<--------------------" + e.getClass() + "---------------------->");
             for (WebElement elem : e) {
-                System.out.println(elem.toString()+ elem.getText());
+                System.out.println(elem.getTagName() + " has name = " + elem.getText() + " attrib=" + elem.getAttribute("type"));
             }
         }
     }
-    public void printElements(List<WebElement> elements ){
+
+    public void printElements(List<WebElement> elements) {
         for (WebElement e : elements) {
-               System.out.println(e.toString()+ e.getText());
+            System.out.println(e.getTagName() + e.getText());
         }
     }
 
