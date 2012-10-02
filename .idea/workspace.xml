@@ -61,8 +61,10 @@
       <file leaf-file-name="TestRobot.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/tester/TestRobot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="44" selection-start="3174" selection-end="3174" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="3" column="6" selection-start="18" selection-end="24" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#2396#2414#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,7 +72,7 @@
       <file leaf-file-name="Finder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/tester/Finder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="19" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
+            <state line="15" column="29" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -79,12 +81,33 @@
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/tester/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="66" selection-start="1111" selection-end="1111" vertical-scroll-proportion="0.0">
+            <state line="26" column="2" selection-start="964" selection-end="964" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#1056#1074#0" expanded="true" />
-                <element signature="e#1372#1386#0" expanded="true" />
-                <element signature="e#1428#1436#0" expanded="true" />
-                <element signature="e#1907#1921#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="32" selection-start="836" selection-end="836" vertical-scroll-proportion="-10.461538">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BTask.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tester/BTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="57" selection-start="2740" selection-end="2740" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#844#852#0" expanded="true" />
+                <element signature="e#1374#1382#0" expanded="true" />
+                <element signature="e#2781#2789#0" expanded="true" />
+                <element signature="e#3205#3219#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -93,26 +116,21 @@
       <file leaf-file-name="Combinations.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/tester/Combinations.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="1" selection-start="1308" selection-end="1308" vertical-scroll-proportion="0.6590258">
+            <state line="15" column="50" selection-start="412" selection-end="412" vertical-scroll-proportion="0.730659">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#266#275#0" expanded="true" />
-                <element signature="e#551#560#0" expanded="true" />
+                <element signature="e#606#615#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BuildInstruction.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tester/BuildInstruction.java">
+      <file leaf-file-name="output.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/output.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="51" selection-start="1349" selection-end="1349" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#607#615#0" expanded="true" />
-                <element signature="e#1095#1103#0" expanded="true" />
-                <element signature="e#2372#2381#0" expanded="true" />
-              </folding>
+            <state line="5" column="42" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -120,7 +138,7 @@
       <file leaf-file-name="Elements.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/tester/Elements.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="60" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
+            <state line="12" column="60" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -138,11 +156,15 @@
       <list>
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/tester/TestRobot.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tester/Elements.java" />
         <option value="$PROJECT_DIR$/src/main/java/tester/Finder.java" />
         <option value="$PROJECT_DIR$/src/main/java/tester/BuildInstruction.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tester/TestRobot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tester/Elements.java" />
+        <option value="$PROJECT_DIR$/1.html" />
+        <option value="$PROJECT_DIR$/output.txt" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/test/java/tester/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tester/BTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/tester/Combinations.java" />
       </list>
     </option>
@@ -246,6 +268,20 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testrobot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testrobot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -318,20 +354,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testrobot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testrobot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -347,9 +369,14 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Aleksandr\Documents\testrobot" />
+    </key>
   </component>
   <component name="RunManager" selected="JUnit.Main.manual">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
@@ -577,25 +604,25 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3987441" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40816328" sideWeight="0.49734244" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19893698" sideWeight="0.5902669" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1602126" sideWeight="0.5902669" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3987441" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40816328" sideWeight="0.49734244" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1602126" sideWeight="0.5902669" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3987441" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40973312" sideWeight="0.49734244" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -653,11 +680,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="70" selection-start="113" selection-end="113" vertical-scroll-proportion="0.1275" />
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Downloads/selenium-server-standalone-2.25.0.jar!/readme.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="23" selection-start="302" selection-end="302" vertical-scroll-proportion="0.20385675" />
@@ -673,80 +695,101 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="1" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="72" selection-start="952" selection-end="952" vertical-scroll-proportion="0.46571428" />
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/2.25.0/selenium-api-2.25.0-sources.jar!/org/openqa/selenium/By.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="113" column="0" selection-start="3693" selection-end="3693" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_02/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1625" column="42" selection-start="68465" selection-end="68465" vertical-scroll-proportion="0.5272206" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tester/TestRobot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="44" selection-start="3174" selection-end="3174" vertical-scroll-proportion="0.0" />
+        <state line="3" column="6" selection-start="18" selection-end="24" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#2396#2414#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tester/Elements.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="60" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/2.25.0/selenium-api-2.25.0-sources.jar!/org/openqa/selenium/By.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="0" selection-start="3693" selection-end="3693" vertical-scroll-proportion="0.0">
+        <state line="12" column="60" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tester/Finder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="19" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
+        <state line="15" column="29" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_02/src.zip!/java/lang/Class.java">
+    <entry file="file://$PROJECT_DIR$/1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1625" column="42" selection-start="68465" selection-end="68465" vertical-scroll-proportion="0.5272206">
+        <state line="16" column="32" selection-start="836" selection-end="836" vertical-scroll-proportion="-10.461538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chromedriver.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="30" selection-start="241" selection-end="241" vertical-scroll-proportion="-29.71131">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="5" selection-start="58" selection-end="58" vertical-scroll-proportion="0.38968483">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="42" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tester/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="66" selection-start="1111" selection-end="1111" vertical-scroll-proportion="0.0">
+        <state line="26" column="2" selection-start="964" selection-end="964" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#1056#1074#0" expanded="true" />
-            <element signature="e#1372#1386#0" expanded="true" />
-            <element signature="e#1428#1436#0" expanded="true" />
-            <element signature="e#1907#1921#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tester/BuildInstruction.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tester/BTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="51" selection-start="1349" selection-end="1349" vertical-scroll-proportion="0.0">
+        <state line="81" column="57" selection-start="2740" selection-end="2740" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#607#615#0" expanded="true" />
-            <element signature="e#1095#1103#0" expanded="true" />
-            <element signature="e#2372#2381#0" expanded="true" />
+            <element signature="e#844#852#0" expanded="true" />
+            <element signature="e#1374#1382#0" expanded="true" />
+            <element signature="e#2781#2789#0" expanded="true" />
+            <element signature="e#3205#3219#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tester/Combinations.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="1" selection-start="1308" selection-end="1308" vertical-scroll-proportion="0.6590258">
+        <state line="15" column="50" selection-start="412" selection-end="412" vertical-scroll-proportion="0.730659">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#266#275#0" expanded="true" />
-            <element signature="e#551#560#0" expanded="true" />
+            <element signature="e#606#615#0" expanded="true" />
           </folding>
         </state>
       </provider>

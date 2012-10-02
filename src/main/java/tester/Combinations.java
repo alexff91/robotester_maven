@@ -16,7 +16,7 @@ public class Combinations extends Object {
         return result;
     }
 
-
+     public static List<String> findPer(){return null;}
     public static <T> List<List<T>> findCombinations(Collection<T> elements, int n) {
         List<List<T>> result = new ArrayList<List<T>>();
 

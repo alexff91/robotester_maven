@@ -5,7 +5,8 @@
 *.war
 *.ear
 *.git
-
-*.idea
-.idea
+/.idea
+*.iml
+output.txt
+*.log
 target

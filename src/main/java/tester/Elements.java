@@ -25,8 +25,8 @@ public String randomString(int leng){
         }
         return str.toString();
     }
-public int randomInt(int max){
-    return (new Random()).nextInt(max);
+public String randomInt(int max){
+    return ((new Random()).nextInt(max))+"";
 }
 
 }
