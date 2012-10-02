@@ -84,7 +84,7 @@ public class Finder {
     }
 
     public List<WebElement> getSelectors() {
-        List<WebElement> select = driver.findElements(By.xpath("//input[@type='checkbox']"));
+        List<WebElement> select = driver.findElements(By.xpath("//select"));
         return select;
     }
 

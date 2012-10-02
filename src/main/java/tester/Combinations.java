@@ -1,9 +1,6 @@
 package tester;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
-import java.util.List;
+import java.util.*;
 
 
 public class Combinations extends Object {
@@ -16,7 +13,25 @@ public class Combinations extends Object {
         return result;
     }
 
-     public static List<String> findPer(){return null;}
+    public static List<String> findPermutations(List<List<String>> in) {
+        Set<List<String>> set = new HashSet<List<String>>();
+
+        for (List<String> acc : in) {
+            for (String s : acc) {
+                List<List<String>> t = in.subList(0, in.indexOf(acc));
+                t.addAll(in.subList(in.indexOf(acc) + 1, in.size()));
+                for (List<String> acc_inner : in) {
+                    for (String s_inner : acc) {
+
+                    }
+                }
+
+            }
+        }
+
+       return null;
+    }
+
     public static <T> List<List<T>> findCombinations(Collection<T> elements, int n) {
         List<List<T>> result = new ArrayList<List<T>>();
 

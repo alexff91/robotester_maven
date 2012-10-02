@@ -10,6 +10,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -76,7 +77,7 @@ public class BTask {
         return " кликнуть по ссылке <" + w.getText()+" "+ w.getAttribute("name") + ">";
     }
 
-    public static List<List<List<String>>> getCombinationsOfInstructions(WebDriver drive, String url) throws Exception {
+   public static List<List<List<String>>> getCombinationsOfInstructions(WebDriver drive, String url) throws Exception {
 
         //Finder f = new Finder(drive,"http://market.yandex.ru/search?hid=7812186");
         Finder f = new Finder(drive, url);
@@ -98,6 +99,29 @@ public class BTask {
         result.add(BTask.feelText(f.getInputTexts()));
         return Combinations.findCombinations(result);
     }
+    public static List<List<String>> getCombinationsOfInstructionsStricted(WebDriver drive, String url,int restr) throws Exception {
+
+
+        Finder f = new Finder(drive, url);
+
+
+        List<Method> m = new ArrayList<Method>(5);
+        m.add(0, BTask.class.getMethod("pressButton", WebElement.class));
+        m.add(1, BTask.class.getMethod("checkBox", WebElement.class));
+        m.add(2, BTask.class.getMethod("pressLink", WebElement.class));
+        m.add(3, BTask.class.getMethod("pressRadio", WebElement.class));
+        m.add(4, BTask.class.getMethod("selectOr", WebElement.class));
+        Collection<String> result = new LinkedList<String>();
+        BTask build = new BTask();
+        result.addAll(BTask.someMethod(build, m.get(0), f.getAllButtons()));
+        result.addAll(BTask.someMethod(build, m.get(1), f.getAllCheckBoxes()));
+        result.addAll(BTask.someMethod(build, m.get(2), f.getAllLinks()));
+        result.addAll(BTask.someMethod(build, m.get(3), f.getAllRadio()));
+        result.addAll(BTask.someMethod(build, m.get(4), f.getSelectors()));
+        result.addAll(BTask.feelText(f.getInputTexts()));
+        return Combinations.findCombinations(result,restr);
+    }
+
 
     public static void printInstructions(List<List<List<String>>> l) {
         for (List<List<String>> acc : l) {
@@ -107,7 +131,21 @@ public class BTask {
             System.out.println();
         }
     }
+    public static void printInstructionsToFileStricted(List<List<String>> l) throws IOException {
+        File file = new File("output_stricted.txt");
 
+        FileWriter fstream = new FileWriter(file);
+        BufferedWriter out = new BufferedWriter(fstream);
+        for (List<String> acc : l) {
+            for (String innerAcc : acc) {
+                out.append(innerAcc.toString());
+            }
+            out.append("\n");
+        }
+        out.close();
+
+
+    }
     public static void printInstructionsToFile(List<List<List<String>>> l) throws IOException {
         File file = new File("output.txt");
 
