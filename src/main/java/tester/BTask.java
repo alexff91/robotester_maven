@@ -115,11 +115,18 @@ public class BTask {
         BTask build = new BTask();
         result.addAll(BTask.someMethod(build, m.get(0), f.getAllButtons()));
         result.addAll(BTask.someMethod(build, m.get(1), f.getAllCheckBoxes()));
-        result.addAll(BTask.someMethod(build, m.get(2), f.getAllLinks()));
+        //result.addAll(BTask.someMethod(build, m.get(2), f.getAllLinks()));
         result.addAll(BTask.someMethod(build, m.get(3), f.getAllRadio()));
         result.addAll(BTask.someMethod(build, m.get(4), f.getSelectors()));
         result.addAll(BTask.feelText(f.getInputTexts()));
-        return Combinations.findCombinations(result,restr);
+        List<List<String>> res  = Combinations.findCombinations(result, restr);
+        for(String s :BTask.someMethod(build, m.get(2), f.getAllLinks())){
+            List l = new ArrayList(1);
+            l.add(0,s);
+            res.add(l);
+        }
+
+        return res;
     }
 
 

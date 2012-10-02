@@ -9,4 +9,5 @@
 *.iml
 output.txt
 *.log
-target
+output_sricted.txt
+/target

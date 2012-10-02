@@ -15,9 +15,9 @@ public class Main {
         //for chromeDriver need to download last version of driver and set property
         //System.setProperty("webdriver.chrome.driver", "C:\\Users\\Aleksandr\\AppData\\Local\\Google\\Chrome\\Application\\chromedriver.exe");
         WebDriver driver = new HtmlUnitDriver();
-        String s = "file:///C:/Users/Aleksandr/Documents/testrobot/1.html";
+       // String s = "file:///C:/Users/Aleksandr/Documents/testrobot/1.html";
         // BTask.printInstructionsToFile(BTask.getCombinationsOfInstructions(driver, s));
-
+        String s = "http://www.yandex.ru";
 //        for (List<String> acc : res2) {
 //            for (String innerAcc : acc) {
 //                System.out.print(innerAcc.toString());
