@@ -11,3 +11,5 @@ output.txt
 *.log
 output_sricted.txt
 /target
+chromedriver.log
+1.html
