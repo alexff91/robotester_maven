@@ -9,7 +9,7 @@
 *.iml
 output.txt
 *.log
-output_sricted.txt
+output_stricted.txt
 /target
 chromedriver.log
 1.html
