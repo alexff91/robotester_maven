@@ -1,6 +1,6 @@
 package tester;
 
-import com.sun.xml.internal.stream.buffer.stax.StreamWriterBufferCreator;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -14,16 +14,35 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Class for generating instructions using class Finder and Elements for this
+ * reasons.
+ */
 public class BTask {
+    /**
+     * For input texts generates instructions for bad and good values
+     *
+     * @param w      WebElemend that needed to be feel
+     * @param values values to feel
+     * @return A list of one {@link String}s of instruction, or an empty list if nothing matches
+     */
     private static List<String> feelAllTexts(WebElement w, List<String> values) {
 
         List l = new LinkedList();
         for (String t : values) {
-            l.add(" ввести в поле <" + w.getText()+" "+ w.getAttribute("name") +" "+w.getAttribute("class") + "> значение " + t);
+            l.add(" ввести в поле <" + w.getText() + " name: " + w.getAttribute("name") + " class:" +
+                    w.getAttribute("class") + " id:" + w.getAttribute("id") + "> значение " + t);
         }
         return l;
     }
 
+    /**
+     * For input texts generates instructions for bad and good values
+     *
+     * @param w      WebElemend that needed to be feel
+     * @param values values to feel
+     * @return A list of all {@link String}s of instructions, or an empty list if nothing matches
+     */
     private static List<String> feelText(List<WebElement> w) {
         Elements e = new Elements();
         List<String> forFeel = new LinkedList<String>();
@@ -39,6 +58,14 @@ public class BTask {
         return forFeel;
     }
 
+    /**
+     * Method that takes as argument an method.
+     *
+     * @param object                      object of class that takes 1 parameter of webelement
+     * @param methodToCall                metod for proceeding
+     * @param objWithAllMethodsToBeCalled list of WebElements
+     * @return A list of all {@link String}s of instructions, or an empty list if nothing matches
+     */
     private static List<String> someMethod(Object object, Method methodToCall, List<WebElement> objWithAllMethodsToBeCalled) {
 
         List<String> result = new LinkedList<String>();
@@ -58,37 +85,55 @@ public class BTask {
     }
 
     public static String pressButton(WebElement w) {
-        return " нажать кнопку <" + w.getText()+" "+ w.getAttribute("name") +" "+ w.getAttribute("class") + ">";
+        return " нажать кнопку <" + w.getText() + " name: " + w.getAttribute("name") + " class:" +
+                w.getAttribute("class") + " id:" + w.getAttribute("id") + ">";
     }
 
     public static String checkBox(WebElement w) {
-        return " выбрать чекбокс <" + w.getText() +" "+ w.getAttribute("name")+" "+ w.getAttribute("class") + ">";
+        return " выбрать чекбокс <" + w.getText() + " name: " + w.getAttribute("name") + " class:" +
+                w.getAttribute("class") + " id:" + w.getAttribute("id") + ">";
     }
 
     public static String selectOr(WebElement w) {
-        return " выбрать селектор <" + w.getText()+" "+ w.getAttribute("name")+" "+ w.getAttribute("class") + ">";
+        return " выбрать селектор <" + w.getText() + " name: " + w.getAttribute("name") + " class:" +
+                w.getAttribute("class") + " id:" + w.getAttribute("id") + ">";
     }
 
     public static String pressRadio(WebElement w) {
-        return " выбрать радио-кнопку <" + w.getText()+" "+ w.getAttribute("name")+" "+ w.getAttribute("class") + ">";
+        return " выбрать радио-кнопку <" + w.getText() + " name: " + w.getAttribute("name") + " class:" +
+                w.getAttribute("class") + " id:" + w.getAttribute("id") + ">";
+    }
+
+    public static String pressImage(WebElement w) {
+        return " кликнуть по изображению <" + w.getText() + " name: " + w.getAttribute("name") + " class:" +
+                w.getAttribute("class") + " id:" + w.getAttribute("id") + ">";
     }
 
     public static String pressLink(WebElement w) {
-        return " кликнуть по ссылке <" + w.getText()+" "+ w.getAttribute("name") +" "+ w.getAttribute("class") + ">";
+        return " кликнуть по ссылке <" + w.getText() + " name: " + w.getAttribute("name") + " href:" +
+                w.getAttribute("href") + " id:" + w.getAttribute("id") + ">";
     }
 
-   public static List<List<List<String>>> getCombinationsOfInstructions(WebDriver drive, String url) throws Exception {
+    /**
+     * Find all combinations of the combinations of filled instructions for every element
+     *
+     * @param drive WebDriver
+     * @param url   url for proceeding
+     * @return A list of lists of Lists of  all {@link String} instructions, or an empty list if nothing matches
+     */
+    public static List<List<List<String>>> getCombinationsOfInstructions(WebDriver drive, String url) throws Exception {
 
         //Finder f = new Finder(drive,"http://market.yandex.ru/search?hid=7812186");
         Finder f = new Finder(drive, url);
 
 
-        List<Method> m = new ArrayList<Method>(5);
+        List<Method> m = new ArrayList<Method>(6);
         m.add(0, BTask.class.getMethod("pressButton", WebElement.class));
         m.add(1, BTask.class.getMethod("checkBox", WebElement.class));
         m.add(2, BTask.class.getMethod("pressLink", WebElement.class));
         m.add(3, BTask.class.getMethod("pressRadio", WebElement.class));
         m.add(4, BTask.class.getMethod("selectOr", WebElement.class));
+        m.add(5, BTask.class.getMethod("pressImage", WebElement.class));
         List<List<String>> result = new LinkedList<List<String>>();
         BTask build = new BTask();
         result.add(BTask.someMethod(build, m.get(0), f.getAllButtons()));
@@ -96,21 +141,33 @@ public class BTask {
         result.add(BTask.someMethod(build, m.get(2), f.getAllLinks()));
         result.add(BTask.someMethod(build, m.get(3), f.getAllRadio()));
         result.add(BTask.someMethod(build, m.get(4), f.getSelectors()));
+        result.add(BTask.someMethod(build, m.get(5), f.getAllImages()));
         result.add(BTask.feelText(f.getInputTexts()));
         return Combinations.findCombinations(result);
     }
-    public static List<List<String>> getCombinationsOfInstructionsStricted(WebDriver drive, String url,int restr) throws Exception {
+
+    /**
+     * Find all combinations of the combinations of filled instructions for every element but only for some restriction
+     * because of too large dimencion of size of all elements
+     *
+     * @param drive WebDriver
+     * @param url   url for proceeding
+     * @param restr restriction, usually equal to 3
+     * @return A list of lists of  all {@link String} instructions, or an empty list if nothing matches
+     */
+    public static List<List<String>> getCombinationsOfInstructionsStricted(WebDriver drive, String url, int restr) throws Exception {
 
 
         Finder f = new Finder(drive, url);
 
 
-        List<Method> m = new ArrayList<Method>(5);
+        List<Method> m = new ArrayList<Method>(6);
         m.add(0, BTask.class.getMethod("pressButton", WebElement.class));
         m.add(1, BTask.class.getMethod("checkBox", WebElement.class));
         m.add(2, BTask.class.getMethod("pressLink", WebElement.class));
         m.add(3, BTask.class.getMethod("pressRadio", WebElement.class));
         m.add(4, BTask.class.getMethod("selectOr", WebElement.class));
+        m.add(5, BTask.class.getMethod("pressImage", WebElement.class));
         Collection<String> result = new LinkedList<String>();
         BTask build = new BTask();
         result.addAll(BTask.someMethod(build, m.get(0), f.getAllButtons()));
@@ -118,22 +175,27 @@ public class BTask {
         //result.addAll(BTask.someMethod(build, m.get(2), f.getAllLinks()));
         result.addAll(BTask.someMethod(build, m.get(3), f.getAllRadio()));
         result.addAll(BTask.someMethod(build, m.get(4), f.getSelectors()));
+        result.addAll(BTask.someMethod(build, m.get(5), f.getAllImages()));
         result.addAll(BTask.feelText(f.getInputTexts()));
-        List<List<String>> res  = new LinkedList<List<String>>();
-        for(String s :BTask.someMethod(build, m.get(2), f.getAllLinks())){
+        List<List<String>> res = new LinkedList<List<String>>();
+        for (String s : BTask.someMethod(build, m.get(2), f.getAllLinks())) {
             List l = new ArrayList(1);
-            l.add(0,s);
+            l.add(0, s);
             res.add(l);
         }
-        for(int i = 0; i <= restr;i++){
-            res.addAll(Combinations.findCombinations(result,i));
+        for (int i = 0; i <= restr; i++) {
+            res.addAll(Combinations.findCombinations(result, i));
         }
 
 
         return res;
     }
 
-
+    /**
+     * Print all instuctions
+     *
+     * @param l list of all instructions
+     */
     public static void printInstructions(List<List<List<String>>> l) {
         for (List<List<String>> acc : l) {
             for (List<String> innerAcc : acc) {
@@ -142,34 +204,50 @@ public class BTask {
             System.out.println();
         }
     }
+
+    /**
+     * Print restricted instuctions to file
+     * @param l list of all instructions
+     */
     public static void printInstructionsToFileStricted(List<List<String>> l) throws IOException {
         File file = new File("output_stricted.txt");
 
         FileWriter fstream = new FileWriter(file);
         BufferedWriter out = new BufferedWriter(fstream);
+        int i = 1;
         for (List<String> acc : l) {
+            out.append("Тест" + i);
             for (String innerAcc : acc) {
-                out.append(innerAcc.toString());
+                out.append(" " + innerAcc.toString() + ".");
+
             }
+            i++;
             out.append("\n");
         }
         out.close();
-
+        fstream.close();
 
     }
+    /**
+     * Print not restricted instuctions to file
+     * @param l list of all instructions
+     */
     public static void printInstructionsToFile(List<List<List<String>>> l) throws IOException {
         File file = new File("output.txt");
 
         FileWriter fstream = new FileWriter(file);
         BufferedWriter out = new BufferedWriter(fstream);
+        int i = 1;
         for (List<List<String>> acc : l) {
+            out.append("Тест" + i);
             for (List<String> innerAcc : acc) {
-                out.append(innerAcc.toString());
+                out.append(" " + innerAcc.toString() + ".");
             }
             out.append("\n");
+            i++;
         }
         out.close();
-
+        fstream.close();
 
     }
 

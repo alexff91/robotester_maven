@@ -2,8 +2,16 @@ package tester;
 
 import java.util.*;
 
-
+/**
+ * Class for finding all combinations given any Collection of type T
+ */
 public class Combinations extends Object {
+
+    /**
+     * Find all combinations of the collection size
+     * @param elements collection of elements for finding all possible combinations
+     * @return A list of lists  all {@link T} elements, or an empty list if nothing matches
+     */
     public static <T> List<List<T>> findCombinations(Collection<T> elements) {
         List<List<T>> result = new ArrayList<List<T>>();
 
@@ -12,7 +20,7 @@ public class Combinations extends Object {
 
         return result;
     }
-
+    // To do: find all possible permutations
     public static List<String> findPermutations(List<List<String>> in) {
         Set<List<String>> set = new HashSet<List<String>>();
 
@@ -31,7 +39,12 @@ public class Combinations extends Object {
 
        return null;
     }
-
+    /**
+     * Find all combinations of the restiction size
+     * @param elements collection of elements for finding all possible combinations
+     * @param n size of bound
+     * @return A list of lists  all {@link T} elements, or an empty list if nothing matches
+     */
     public static <T> List<List<T>> findCombinations(Collection<T> elements, int n) {
         List<List<T>> result = new ArrayList<List<T>>();
 
