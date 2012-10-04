@@ -17,6 +17,7 @@ public String randomString(int leng){
     }
     return str.toString();
 }
+
     public String randomString(){
         StringBuilder str = new StringBuilder();
         int r = (new Random()).nextInt(100);

@@ -47,7 +47,12 @@ public class Finder {
     }
 
     public List<WebElement> getAllButtons() {
-        List<WebElement> buttons = driver.findElements(By.xpath("//input[@type='button']"));
+        List<WebElement> buttons = driver.findElements(By.xpath("//input[@type='button' or @type='submit']"));
+
+        return buttons;
+    }
+    public List<WebElement> getAllImages() {
+        List<WebElement> buttons = driver.findElements(By.xpath("//img"));
 
         return buttons;
     }
@@ -89,7 +94,7 @@ public class Finder {
     }
 
     public List<WebElement> getInputTexts() {
-        List<WebElement> select = driver.findElements(By.xpath("//input[@type='text' and 'search']"));
+        List<WebElement> select = driver.findElements(By.xpath("//input[@type='text' or 'search']"));
         return select;
     }
 
@@ -104,7 +109,7 @@ public class Finder {
 
     public void printElements(List<WebElement> elements) {
         for (WebElement e : elements) {
-            System.out.println(e.getTagName() + e.getText());
+            System.out.println(e.getTagName() + e.getText()+" "+e.getAttribute("type"));
         }
     }
 

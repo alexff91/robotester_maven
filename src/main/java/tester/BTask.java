@@ -19,7 +19,7 @@ public class BTask {
 
         List l = new LinkedList();
         for (String t : values) {
-            l.add(" ввести в поле <" + w.getText()+" "+ w.getAttribute("name") + "> значение " + t);
+            l.add(" ввести в поле <" + w.getText()+" "+ w.getAttribute("name") +" "+w.getAttribute("class") + "> значение " + t);
         }
         return l;
     }
@@ -58,23 +58,23 @@ public class BTask {
     }
 
     public static String pressButton(WebElement w) {
-        return " нажать кнопку <" + w.getText()+" "+ w.getAttribute("name") + ">";
+        return " нажать кнопку <" + w.getText()+" "+ w.getAttribute("name") +" "+ w.getAttribute("class") + ">";
     }
 
     public static String checkBox(WebElement w) {
-        return " выбрать чекбокс <" + w.getText() +" "+ w.getAttribute("name")+ ">";
+        return " выбрать чекбокс <" + w.getText() +" "+ w.getAttribute("name")+" "+ w.getAttribute("class") + ">";
     }
 
     public static String selectOr(WebElement w) {
-        return " выбрать селектор <" + w.getText()+" "+ w.getAttribute("name") + ">";
+        return " выбрать селектор <" + w.getText()+" "+ w.getAttribute("name")+" "+ w.getAttribute("class") + ">";
     }
 
     public static String pressRadio(WebElement w) {
-        return " выбрать радио-кнопку <" + w.getText()+" "+ w.getAttribute("name") + ">";
+        return " выбрать радио-кнопку <" + w.getText()+" "+ w.getAttribute("name")+" "+ w.getAttribute("class") + ">";
     }
 
     public static String pressLink(WebElement w) {
-        return " кликнуть по ссылке <" + w.getText()+" "+ w.getAttribute("name") + ">";
+        return " кликнуть по ссылке <" + w.getText()+" "+ w.getAttribute("name") +" "+ w.getAttribute("class") + ">";
     }
 
    public static List<List<List<String>>> getCombinationsOfInstructions(WebDriver drive, String url) throws Exception {
@@ -119,12 +119,16 @@ public class BTask {
         result.addAll(BTask.someMethod(build, m.get(3), f.getAllRadio()));
         result.addAll(BTask.someMethod(build, m.get(4), f.getSelectors()));
         result.addAll(BTask.feelText(f.getInputTexts()));
-        List<List<String>> res  = Combinations.findCombinations(result, restr);
+        List<List<String>> res  = new LinkedList<List<String>>();
         for(String s :BTask.someMethod(build, m.get(2), f.getAllLinks())){
             List l = new ArrayList(1);
             l.add(0,s);
             res.add(l);
         }
+        for(int i = 0; i <= restr;i++){
+            res.addAll(Combinations.findCombinations(result,i));
+        }
+
 
         return res;
     }
