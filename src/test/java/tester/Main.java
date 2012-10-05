@@ -36,6 +36,9 @@ public class Main {
         String s = sc.nextLine();
         String d = "http://www.yandex.ru";
         Assert.assertEquals(s,d);
+        sc.close();
+        fr.close();
+        driver.close();
 
     }
 }
