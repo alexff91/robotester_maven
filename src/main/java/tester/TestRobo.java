@@ -6,7 +6,6 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 import java.io.*;
 import java.util.Scanner;
-
 public class TestRobo {
     public static void main(String[] args) throws Exception {
         //for chromeDriver need to download last version of driver and set property
