@@ -12,7 +12,7 @@ import java.io.*;
 import java.util.*;
 
 
-public class Main {
+public class MainTest {
     @Test
     public void manual() throws Exception {
         //for chromeDriver need to download last version of driver and set property
